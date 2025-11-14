@@ -30,12 +30,12 @@
         {
             Content = new FlowLayoutPanel();
             RoleName = new Panel();
+            comboBox1 = new ComboBox();
+            Reset_Btn = new Button();
             RoleName_Label = new Label();
-            RoleNmae_Text = new TextBox();
             RolePoint = new Panel();
             RolePoint_Label = new Label();
             RolePoint_Point = new Label();
-            Reset_Btn = new Button();
             Content.SuspendLayout();
             RoleName.SuspendLayout();
             RolePoint.SuspendLayout();
@@ -52,13 +52,33 @@
             // 
             // RoleName
             // 
+            RoleName.Controls.Add(comboBox1);
             RoleName.Controls.Add(Reset_Btn);
             RoleName.Controls.Add(RoleName_Label);
-            RoleName.Controls.Add(RoleNmae_Text);
             RoleName.Location = new Point(3, 3);
             RoleName.Name = "RoleName";
             RoleName.Size = new Size(269, 37);
             RoleName.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "---5★---", "友紀", "小春", "琳", "路克", "卡莉佩", "麥格納", "奧爾萊亞", "梅鈴", "維諾尼卡", "蕾歐娜", "雨果", "凱隆", "---4★---", "妮雅", "席琳娜", "德蕾莎", "艾美", "盧卡斯", "瑪麗貝爾", "米卡", "百麗兒", "凱西烏斯", "歐文", "蕾伊" });
+            comboBox1.Location = new Point(81, 9);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(100, 23);
+            comboBox1.TabIndex = 3;
+            comboBox1.Text = "請選擇角色";
+            // 
+            // Reset_Btn
+            // 
+            Reset_Btn.Location = new Point(187, 9);
+            Reset_Btn.Name = "Reset_Btn";
+            Reset_Btn.Size = new Size(75, 23);
+            Reset_Btn.TabIndex = 2;
+            Reset_Btn.Text = "重置";
+            Reset_Btn.UseVisualStyleBackColor = true;
+            Reset_Btn.Click += Reset_Btn_Click;
             // 
             // RoleName_Label
             // 
@@ -68,13 +88,6 @@
             RoleName_Label.Size = new Size(64, 15);
             RoleName_Label.TabIndex = 1;
             RoleName_Label.Text = "roleName";
-            // 
-            // RoleNmae_Text
-            // 
-            RoleNmae_Text.Location = new Point(81, 10);
-            RoleNmae_Text.Name = "RoleNmae_Text";
-            RoleNmae_Text.Size = new Size(100, 23);
-            RoleNmae_Text.TabIndex = 0;
             // 
             // RolePoint
             // 
@@ -103,16 +116,6 @@
             RolePoint_Point.TabIndex = 1;
             RolePoint_Point.Text = "costNumber";
             // 
-            // Reset_Btn
-            // 
-            Reset_Btn.Location = new Point(187, 9);
-            Reset_Btn.Name = "Reset_Btn";
-            Reset_Btn.Size = new Size(75, 23);
-            Reset_Btn.TabIndex = 2;
-            Reset_Btn.Text = "重置";
-            Reset_Btn.UseVisualStyleBackColor = true;
-            Reset_Btn.Click += Reset_Btn_Click;
-            // 
             // RolePanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -134,10 +137,10 @@
         private FlowLayoutPanel Content;
         private Panel RoleName;
         private Label RoleName_Label;
-        private TextBox RoleNmae_Text;
         private Panel RolePoint;
         private Label RolePoint_Label;
         private Label RolePoint_Point;
         private Button Reset_Btn;
+        private ComboBox comboBox1;
     }
 }

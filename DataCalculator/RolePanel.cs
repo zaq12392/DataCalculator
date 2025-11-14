@@ -124,7 +124,7 @@ namespace DataCalculator
 
         private void Reset_Btn_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < m_lst_costEvent.Count; i++)
+            for (int i = 0; i < m_lst_costEvent.Count; i++)
             {
                 m_lst_data[i].Count = 0;
                 m_lst_data[i].NowPoint = 0;

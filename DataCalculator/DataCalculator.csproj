@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <BaseOutputPath></BaseOutputPath>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyTitle>DataCalculator</AssemblyTitle>
+    <RootNamespace>DataCalculator</RootNamespace>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
 </Project>
