@@ -35,6 +35,7 @@
             RolePoint = new Panel();
             RolePoint_Label = new Label();
             RolePoint_Point = new Label();
+            Reset_Btn = new Button();
             Content.SuspendLayout();
             RoleName.SuspendLayout();
             RolePoint.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             // RoleName
             // 
+            RoleName.Controls.Add(Reset_Btn);
             RoleName.Controls.Add(RoleName_Label);
             RoleName.Controls.Add(RoleNmae_Text);
             RoleName.Location = new Point(3, 3);
@@ -101,6 +103,16 @@
             RolePoint_Point.TabIndex = 1;
             RolePoint_Point.Text = "costNumber";
             // 
+            // Reset_Btn
+            // 
+            Reset_Btn.Location = new Point(187, 9);
+            Reset_Btn.Name = "Reset_Btn";
+            Reset_Btn.Size = new Size(75, 23);
+            Reset_Btn.TabIndex = 2;
+            Reset_Btn.Text = "重置";
+            Reset_Btn.UseVisualStyleBackColor = true;
+            Reset_Btn.Click += Reset_Btn_Click;
+            // 
             // RolePanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -126,5 +138,6 @@
         private Panel RolePoint;
         private Label RolePoint_Label;
         private Label RolePoint_Point;
+        private Button Reset_Btn;
     }
 }
