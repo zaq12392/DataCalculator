@@ -7,6 +7,7 @@ namespace DataCalculator
     {
         /// <summary> 
         /// 設計工具所需的變數。
+        /// 強啊翠神
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
