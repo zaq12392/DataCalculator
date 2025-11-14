@@ -31,6 +31,7 @@
             DataCost_Text = new Label();
             DataCost_ComboBox = new ComboBox();
             MainPanel = new FlowLayoutPanel();
+            Reset_Btn = new Button();
             SuspendLayout();
             // 
             // DataCost_Text
@@ -61,11 +62,22 @@
             MainPanel.Size = new Size(878, 515);
             MainPanel.TabIndex = 2;
             // 
+            // Reset_Btn
+            // 
+            Reset_Btn.Location = new Point(218, 7);
+            Reset_Btn.Name = "Reset_Btn";
+            Reset_Btn.Size = new Size(75, 23);
+            Reset_Btn.TabIndex = 3;
+            Reset_Btn.Text = "全域重置";
+            Reset_Btn.UseVisualStyleBackColor = true;
+            Reset_Btn.Click += ResetAllBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(899, 559);
+            Controls.Add(Reset_Btn);
             Controls.Add(DataCost_Text);
             Controls.Add(DataCost_ComboBox);
             Controls.Add(MainPanel);
@@ -81,5 +93,6 @@
         private Label DataCost_Text;
         private ComboBox DataCost_ComboBox;
         private FlowLayoutPanel MainPanel;
+        private Button Reset_Btn;
     }
 }

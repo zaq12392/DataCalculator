@@ -69,6 +69,7 @@
             comboBox1.Size = new Size(100, 23);
             comboBox1.TabIndex = 3;
             comboBox1.Text = "請選擇角色";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // Reset_Btn
             // 

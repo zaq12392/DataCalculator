@@ -7,7 +7,6 @@ namespace DataCalculator
     {
         /// <summary> 
         /// 設計工具所需的變數。
-        /// 強啊翠神
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -48,8 +47,9 @@ namespace DataCalculator
             ContentCopy.Controls.Add(numberText);
             ContentCopy.Location = new Point(3, 3);
             ContentCopy.Name = "ContentCopy";
-            ContentCopy.Size = new Size(210, 24);
+            ContentCopy.Size = new Size(210, 28);
             ContentCopy.TabIndex = 6;
+            ContentCopy.Paint += ContentCopy_Paint;
             // 
             // title
             // 
@@ -63,9 +63,9 @@ namespace DataCalculator
             // 
             // minusBtn
             // 
-            minusBtn.Location = new Point(114, -3);
+            minusBtn.Location = new Point(114, 3);
             minusBtn.Name = "minusBtn";
-            minusBtn.Size = new Size(25, 25);
+            minusBtn.Size = new Size(24, 24);
             minusBtn.TabIndex = 1;
             minusBtn.Text = "-";
             minusBtn.UseVisualStyleBackColor = true;
@@ -73,9 +73,9 @@ namespace DataCalculator
             // 
             // plusBtn
             // 
-            plusBtn.Location = new Point(176, -3);
+            plusBtn.Location = new Point(175, 3);
             plusBtn.Name = "plusBtn";
-            plusBtn.Size = new Size(25, 25);
+            plusBtn.Size = new Size(24, 24);
             plusBtn.TabIndex = 3;
             plusBtn.Text = "+";
             plusBtn.UseVisualStyleBackColor = true;
@@ -83,9 +83,10 @@ namespace DataCalculator
             // 
             // numberText
             // 
-            numberText.Location = new Point(145, 0);
+            numberText.Location = new Point(144, 3);
+            numberText.Multiline = true;
             numberText.Name = "numberText";
-            numberText.Size = new Size(25, 23);
+            numberText.Size = new Size(25, 24);
             numberText.TabIndex = 2;
             numberText.TextChanged += numberText_TextChanged;
             numberText.KeyPress += numberText_KeyPress;

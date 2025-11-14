@@ -11,6 +11,21 @@ namespace DataCalculator
             DataCost_ComboBox.SelectedIndex = 0; //難度下拉選單預設0
             CreateRolePanel();
         }
+        // 全域重置
+        public void ResetAllRoles()
+        {
+            foreach (var role in m_lst_role)
+            {
+                role.Reset();
+            }
+        }
+
+
+        private void ResetAllBtn_Click(object sender, EventArgs e)
+        {
+            ResetAllRoles();
+        }
+
         /// <summary>
         /// 基礎分數
         /// </summary>

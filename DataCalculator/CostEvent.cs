@@ -47,7 +47,7 @@ namespace DataCalculator
 
                 return;
             }
-                
+
 
             // 取數字
             if (int.TryParse(numberText.Text, out int iNum))
@@ -63,6 +63,18 @@ namespace DataCalculator
                     m_data.NowPoint = m_data.Count * m_data.Cost;
 
                     SetPointText();
+                }
+
+                //  當移除固有卡牌，通知RolePanel做聯動
+                if (m_data.ID == 6)
+                {
+                    m_role.SyncRemoveCard(m_data.Count);
+                }
+
+                //  當中立靈光一閃或中立神閃，檢查中立卡牌數量
+                if (m_data.ID == 2 || m_data.ID == 3)
+                {
+                    m_role.EnsureNeutralCard(m_data.Count);
                 }
             }
         }
@@ -99,7 +111,7 @@ namespace DataCalculator
                 m_data.NowPoint += m_data.Cost;
 
                 SetPointText();
-            }  
+            }
         }
 
         void SetPointText()
@@ -148,5 +160,13 @@ namespace DataCalculator
 
             SetPointText();
         }
+
+        private void ContentCopy_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+
     }
 }
