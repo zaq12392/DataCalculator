@@ -30,6 +30,7 @@
         {
             Content = new FlowLayoutPanel();
             RoleName = new Panel();
+            RoleImage = new PictureBox();
             comboBox1 = new ComboBox();
             Reset_Btn = new Button();
             RoleName_Label = new Label();
@@ -38,6 +39,7 @@
             RolePoint_Point = new Label();
             Content.SuspendLayout();
             RoleName.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)RoleImage).BeginInit();
             RolePoint.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,28 +54,36 @@
             // 
             // RoleName
             // 
+            RoleName.Controls.Add(RoleImage);
             RoleName.Controls.Add(comboBox1);
             RoleName.Controls.Add(Reset_Btn);
             RoleName.Controls.Add(RoleName_Label);
             RoleName.Location = new Point(3, 3);
             RoleName.Name = "RoleName";
-            RoleName.Size = new Size(269, 37);
+            RoleName.Size = new Size(269, 66);
             RoleName.TabIndex = 0;
+            // 
+            // RoleImage
+            // 
+            RoleImage.Location = new Point(3, 3);
+            RoleImage.Name = "RoleImage";
+            RoleImage.Size = new Size(50, 50);
+            RoleImage.TabIndex = 4;
+            RoleImage.TabStop = false;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "---5★---", "友紀", "小春", "琳", "路克", "卡莉佩", "麥格納", "奧爾萊亞", "梅鈴", "維諾尼卡", "蕾歐娜", "雨果", "凱隆", "---4★---", "妮雅", "席琳娜", "德蕾莎", "艾美", "盧卡斯", "瑪麗貝爾", "米卡", "百麗兒", "凱西烏斯", "歐文", "蕾伊" });
-            comboBox1.Location = new Point(81, 9);
+            comboBox1.Items.AddRange(new object[] { "---5★---", "友紀", "小春", "琳", "路克", "卡莉佩", "麥格納", "奧爾萊亞", "梅鈴", "維諾妮卡", "蕾歐娜", "雨果", "凱隆", "---4★---", "妮雅", "席琳娜", "德蕾莎", "艾美", "盧卡斯", "瑪麗貝爾", "米卡", "百麗兒", "凱西烏斯", "歐文", "蕾伊" });
+            comboBox1.Location = new Point(61, 31);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(100, 23);
             comboBox1.TabIndex = 3;
-            comboBox1.Text = "請選擇角色";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // Reset_Btn
             // 
-            Reset_Btn.Location = new Point(187, 9);
+            Reset_Btn.Location = new Point(191, 30);
             Reset_Btn.Name = "Reset_Btn";
             Reset_Btn.Size = new Size(75, 23);
             Reset_Btn.TabIndex = 2;
@@ -84,7 +94,7 @@
             // RoleName_Label
             // 
             RoleName_Label.AutoSize = true;
-            RoleName_Label.Location = new Point(11, 13);
+            RoleName_Label.Location = new Point(59, 13);
             RoleName_Label.Name = "RoleName_Label";
             RoleName_Label.Size = new Size(64, 15);
             RoleName_Label.TabIndex = 1;
@@ -128,6 +138,7 @@
             Content.ResumeLayout(false);
             RoleName.ResumeLayout(false);
             RoleName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)RoleImage).EndInit();
             RolePoint.ResumeLayout(false);
             RolePoint.PerformLayout();
             ResumeLayout(false);
@@ -143,5 +154,6 @@
         private Label RolePoint_Point;
         private Button Reset_Btn;
         private ComboBox comboBox1;
+        private PictureBox RoleImage;
     }
 }

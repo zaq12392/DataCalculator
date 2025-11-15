@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DataCalculator
 {
@@ -26,8 +27,17 @@ namespace DataCalculator
 
             CreateCostEvent();
 
-            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend; //打字自動補完選項
+            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems; //打字自動搜尋清單內的ITEM
+
+            comboBox1.SelectedIndexChanged += (s, e) => //選完之後取消反白
+            {
+                this.BeginInvoke((Action)(() =>
+                {
+                    comboBox1.SelectionStart = comboBox1.Text.Length;
+                    comboBox1.SelectionLength = 0;
+                }));
+            };
         }
 
         Form1 Main;
@@ -115,7 +125,7 @@ namespace DataCalculator
         }
 
         // 提示物件
-        private ToolTip toolTip = new ToolTip();
+        private System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
         private void CreateCostEvent()
         {
             foreach (var e in m_lst_data)
@@ -151,10 +161,40 @@ namespace DataCalculator
         {
             Reset();
         }
-
+        
+        /// <summary>
+        /// 選擇角色連動換圖片
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBox1.SelectionStart = comboBox1.Text.Length;
+            comboBox1.SelectionLength = 0;
 
+            RoleImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            if (comboBox1.SelectedItem != null)
+            {
+                Image? _img = LoadImage(comboBox1.SelectedItem.ToString());
+                if (_img != null)
+                    RoleImage.Image = _img;
+
+                RoleName_Label.Text = string.Empty;
+            }
+        }
+
+
+
+        Image? LoadImage(string iName)
+        {
+            //找同名檔案的圖片
+            object _obj = Properties.Resources.ResourceManager.GetObject(iName);
+
+            if (_obj is Image img)
+            {
+                return img;
+            }
+            return null;
         }
 
 
@@ -165,10 +205,11 @@ namespace DataCalculator
                 m_lst_data[i].Count = 0;
                 m_lst_data[i].NowPoint = 0;
                 m_lst_costEvent[i].numberText.Text = "0";
-                comboBox1.SelectedIndex = -1; 
-                comboBox1.Text = "請選擇角色";
             }
-
+            comboBox1.SelectedIndex = -1;
+            comboBox1.Text = "請選擇角色";
+            RoleName_Label.Text = "角色" + (m_index + 1).ToString();
+            RoleImage.Image = null;
             UpdatePoint();
         }
 
