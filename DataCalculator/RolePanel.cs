@@ -159,7 +159,7 @@ namespace DataCalculator
 
         private void Reset_Btn_Click(object sender, EventArgs e)
         {
-            Reset();
+            Reset(false);
         }
         
         /// <summary>
@@ -198,7 +198,7 @@ namespace DataCalculator
         }
 
 
-        public void Reset()
+        public void Reset(bool iIsAllReset)
         {
             for (int i = 0; i < m_lst_costEvent.Count; i++)
             {
@@ -206,10 +206,15 @@ namespace DataCalculator
                 m_lst_data[i].NowPoint = 0;
                 m_lst_costEvent[i].numberText.Text = "0";
             }
-            comboBox1.SelectedIndex = -1;
-            comboBox1.Text = "請選擇角色";
-            RoleName_Label.Text = "角色" + (m_index + 1).ToString();
-            RoleImage.Image = null;
+
+            if (iIsAllReset)
+            {
+                comboBox1.SelectedIndex = -1;
+                comboBox1.Text = "請選擇角色";
+                RoleName_Label.Text = "角色" + (m_index + 1).ToString();
+                RoleImage.Image = null;
+            }
+            
             UpdatePoint();
         }
 

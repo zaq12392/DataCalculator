@@ -16,7 +16,7 @@ namespace DataCalculator
         {
             foreach (var role in m_lst_role)
             {
-                role.Reset();
+                role.Reset(true);
             }
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             DataCost_Text = new Label();
             DataCost_ComboBox = new ComboBox();
             MainPanel = new FlowLayoutPanel();
@@ -81,6 +82,7 @@
             Controls.Add(DataCost_Text);
             Controls.Add(DataCost_ComboBox);
             Controls.Add(MainPanel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "CZN計算機";
             Load += Form1_Load;

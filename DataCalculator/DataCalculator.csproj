@@ -11,7 +11,12 @@
     <AssemblyTitle>DataCalculator</AssemblyTitle>
     <RootNamespace>DataCalculator</RootNamespace>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="appicon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
