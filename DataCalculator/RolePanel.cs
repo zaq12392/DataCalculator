@@ -25,6 +25,8 @@ namespace DataCalculator
 
             InitUI();
 
+            InitComboBox();
+
             CreateCostEvent();
 
             comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend; //打字自動補完選項
@@ -69,6 +71,36 @@ namespace DataCalculator
             RoleName_Label.Text = "角色" + (m_index + 1).ToString();
 
             UpdatePoint();
+        }
+
+        void InitComboBox()
+        {
+            comboBox1.Items.AddRange(new object[] { 
+                "---5★---", 
+                "友紀", 
+                "小春", 
+                "琳", 
+                "路克", 
+                "卡莉佩", 
+                "麥格納", 
+                "奧爾萊亞", 
+                "梅鈴", 
+                "維若妮卡", 
+                "蕾歐娜", 
+                "雨果", 
+                "凱隆", 
+                "---4★---", 
+                "妮雅", 
+                "席琳娜", 
+                "德蕾莎", 
+                "艾美", 
+                "盧卡斯", 
+                "瑪莉貝爾", 
+                "米卡", 
+                "百麗兒", 
+                "凱西烏斯", 
+                "歐文", 
+                "蕾伊" });
         }
 
         /// <summary>

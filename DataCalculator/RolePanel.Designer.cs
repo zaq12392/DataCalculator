@@ -74,7 +74,6 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "---5★---", "友紀", "小春", "琳", "路克", "卡莉佩", "麥格納", "奧爾萊亞", "梅鈴", "維諾妮卡", "蕾歐娜", "雨果", "凱隆", "---4★---", "妮雅", "席琳娜", "德蕾莎", "艾美", "盧卡斯", "瑪麗貝爾", "米卡", "百麗兒", "凱西烏斯", "歐文", "蕾伊" });
             comboBox1.Location = new Point(61, 31);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(100, 23);
