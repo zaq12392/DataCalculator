@@ -179,8 +179,15 @@ namespace DataCalculator
                 string tipText = "";
                 switch (e.ID)
                 {
+                    // 中立卡牌
+                    case 0: tipText = "記錄所有的中立卡牌數量"; break;
+                    // 中立靈光
+                    case 2: tipText = "僅記錄中立靈光一閃的數量"; break;
+                    // 中立神閃
+                    case 3: tipText = "僅記錄中立神閃的數量"; break;
+                    // 移除角色卡牌提示
                     case 6: tipText = "移除角色卡牌時，會同步移除卡牌數量"; break;
-
+                    
                 }
 
                 toolTip.SetToolTip(_copy.title, tipText);
