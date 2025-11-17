@@ -111,7 +111,7 @@
             // RolePoint_Label
             // 
             RolePoint_Label.AutoSize = true;
-            RolePoint_Label.Location = new Point(3, 17);
+            RolePoint_Label.Location = new Point(147, 17);
             RolePoint_Label.Name = "RolePoint_Label";
             RolePoint_Label.Size = new Size(55, 15);
             RolePoint_Label.TabIndex = 0;
@@ -120,7 +120,7 @@
             // RolePoint_Point
             // 
             RolePoint_Point.AutoSize = true;
-            RolePoint_Point.Location = new Point(64, 17);
+            RolePoint_Point.Location = new Point(208, 17);
             RolePoint_Point.Name = "RolePoint_Point";
             RolePoint_Point.Size = new Size(77, 15);
             RolePoint_Point.TabIndex = 1;
@@ -130,6 +130,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = ColorTranslator.FromHtml("#FAFAFA");
             Controls.Add(RolePoint);
             Controls.Add(Content);
             Name = "RolePanel";

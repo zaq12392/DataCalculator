@@ -83,6 +83,7 @@
             Controls.Add(DataCost_ComboBox);
             Controls.Add(MainPanel);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            BackColor = ColorTranslator.FromHtml("#E8ECF3");
             Name = "Form1";
             Text = "CZN計算機";
             Load += Form1_Load;

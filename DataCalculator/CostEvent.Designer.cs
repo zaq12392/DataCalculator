@@ -96,6 +96,7 @@ namespace DataCalculator
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentCopy);
+            Margin = new Padding(33, 3, 3, 3);
             Name = "CostEvent";
             Size = new Size(210, 30);
             ContentCopy.ResumeLayout(false);
