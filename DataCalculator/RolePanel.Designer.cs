@@ -49,7 +49,7 @@
             Content.FlowDirection = FlowDirection.TopDown;
             Content.Location = new Point(3, 3);
             Content.Name = "Content";
-            Content.Size = new Size(272, 432);
+            Content.Size = new Size(272, 470);
             Content.TabIndex = 0;
             // 
             // RoleName
@@ -103,7 +103,7 @@
             // 
             RolePoint.Controls.Add(RolePoint_Label);
             RolePoint.Controls.Add(RolePoint_Point);
-            RolePoint.Location = new Point(3, 441);
+            RolePoint.Location = new Point(3, 479);
             RolePoint.Name = "RolePoint";
             RolePoint.Size = new Size(272, 49);
             RolePoint.TabIndex = 1;
@@ -130,11 +130,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = ColorTranslator.FromHtml("#FAFAFA");
+            BackColor = Color.FromArgb(250, 250, 250);
             Controls.Add(RolePoint);
             Controls.Add(Content);
             Name = "RolePanel";
-            Size = new Size(278, 493);
+            Size = new Size(278, 531);
             Content.ResumeLayout(false);
             RoleName.ResumeLayout(false);
             RoleName.PerformLayout();
